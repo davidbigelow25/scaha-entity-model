@@ -13,3 +13,10 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/scaha-entity-model.iml
+/.idea/vcs.xml
+# Default ignored files
+/workspace.xml
+/.idea/workspace.xml

@@ -1,4 +1,4 @@
-package scaha_orm
+package entity
 
 import "github.com/jinzhu/gorm"
 

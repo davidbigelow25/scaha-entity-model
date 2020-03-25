@@ -1,4 +1,4 @@
-package scaha_orm
+package entity
 
 import (
 	"database/sql/driver"
