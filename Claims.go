@@ -1,6 +1,6 @@
 package entity
 
-import "gopkg.in/dgrijalva/jwt-go.v3"
+import "github.com/dgrijalva/jwt-go"
 
 // This is custom claims to to pass around all the role information tied to the user when the user authenticates
 //
