@@ -17,7 +17,9 @@ type Club struct {
 	Tag  		  string
 	ShortName 	  string
 	Name 		  string
-	IsHighSchool  bool
+	Url           string
+	IsActive 	  bool
+	IsHighSchool  BitBool
 	MobileImageURL string
 }
 
