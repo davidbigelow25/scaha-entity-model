@@ -1,6 +1,7 @@
 package entity
 
 import (
+	"github.com/go-sql-driver/mysql"
 	"time"
 )
 
@@ -24,7 +25,7 @@ type Livegame struct {
 	Venuetag       string
 	Sheetname      string
 	Actdate		   time.Time
-	Starttime      time.Time
+	Starttime      mysql.NullTime
 	Gametag        string
 	Scorehome      uint
 	Scoreaway      uint
