@@ -13,26 +13,25 @@ import (
 
 type Livegame struct {
 
-	IdTeamHome	   uint  `gorm:"column:idteamhome"`
-	IdTeamAway	   uint   `gorm:"column:idteamhome"`
-	HomeTeam	  Teams    `gorm:"foreignkey:IdTeamHome"`
-	AwayTeam	  Teams    `gorm:"foreignkey:IdTeamAway"`
+	IdTeamHome uint  `gorm:"column:idteamhome"`
+	IdTeamAway uint  `gorm:"column:idteamaway"`
+	HomeTeam   Teams `gorm:"foreignkey:idteamhome"`
+	AwayTeam   Teams `gorm:"foreignkey:idteamaway"`
 
-	Idschedule 	   uint
-	Typetag			string
-	Statetag       string
-	Venuetag       string
-	Sheetname      string
-	Actdate		   time.Time
-	Starttime      string
-	Gametag        string
-	Scorehome      uint
-	Scoreaway      uint
-	Gamenotes      string
+	Idschedule uint
+	Typetag    string
+	Statetag   string
+	Venuetag   string
+	Sheetname  string
+	Actdate    time.Time
+	Starttime  string
+	Gametag    string
+	Scorehome  uint
+	Scoreaway  uint
+	Gamenotes  string
 
-	ID     uint `gorm:"column:idlivegame;primary_key"`
-	UpdatedAt 	   time.Time `gorm:"column:updated"`
-//	DeletedAt     *time.Time `sql:"index"`
-	CreatedAt 	   time.Time
+	ID        uint      `gorm:"column:idlivegame;primary_key"`
+	UpdatedAt time.Time `gorm:"column:updated"`
+	//	DeletedAt     *time.Time `sql:"index"`
+	CreatedAt time.Time
 }
-
