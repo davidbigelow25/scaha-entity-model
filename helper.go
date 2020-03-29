@@ -30,6 +30,7 @@ func (b *BitBool) Scan(src interface{}) error {
 	return nil
 }
 
+
 type Roles []Role
 
 //
