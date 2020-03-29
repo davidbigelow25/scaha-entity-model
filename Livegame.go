@@ -32,7 +32,7 @@ type Livegame struct {
 
 	ID     uint `gorm:"column:idlivegame;primary_key"`
 	UpdatedAt 	   time.Time `gorm:"column:updated"`
-	DeletedAt     *time.Time `sql:"index"`
+//	DeletedAt     *time.Time `sql:"index"`
 	CreatedAt 	   time.Time
 }
 
