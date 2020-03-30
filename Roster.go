@@ -26,7 +26,7 @@ type Roster struct {
 	IsSupsended BitBool `gorm:"column:issuspended"`
 
 	Person Person `gorm:"foreignkey:IdPerson"`
-	Player Player `gorm:"foreignkey:IdPerson"`
+	Player Player `gorm:"foreignkey:IdPerson;association_foreignkey:IdPerson"`
 
 	// Controll information
 	ID uint `gorm:"column:idroster;primary_key"`
