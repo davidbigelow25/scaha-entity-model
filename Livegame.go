@@ -22,9 +22,9 @@ type Livegame struct {
 	Scoring []*Scoring `gorm:"foreignkey:IdLiveGame"`
 	Penalties []*Penalty `gorm:"foreignkey:IdLiveGame"`
 
-	HomeTeamSuspensions []*Suspensions `gorm:"foreignkey:IdTeamHome;association_foreignkey:IdTeam"`
-	AwayTeamSuspensions []*Suspensions `gorm:"foreignkey:IdTeamAway;association_foreignkey:IdTeam"`
-
+	HomeTeamSuspensions []*Suspensions `gorm:"foreignkey:IdTeam;association_foreignkey:IdTeamHome"`
+	AwayTeamSuspensions []*Suspensions `gorm:"foreignkey:IdTeam;association_foreignkey:IdTeamAway"`
+	
 	Idschedule uint
 	Typetag    string
 	Statetag   string

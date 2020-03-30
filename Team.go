@@ -21,6 +21,9 @@ type Teams struct {
 	//  Roster
 	RosterSpots  []*Roster  `gorm:"foreignkey:IdTeam"`
 
+	// Suspensions from a Team Perspective
+	Suspensions []*Suspensions `gorm:"foreignkey:IdTeam"`
+
 	// Controll information
 	ID uint `gorm:"column:idteams;primary_key"`
 	IsActive bool    `gorm:"column:isactive"`
