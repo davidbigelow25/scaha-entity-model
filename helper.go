@@ -31,6 +31,34 @@ func (b *BitBool) Scan(src interface{}) error {
 }
 
 
+
+// BitBool is an implementation of a bool for the MySQL type BIT(1).
+// This type allows you to avoid wasting an entire byte for MySQL's boolean type TINYINT.
+type IntBool bool
+
+// Value implements the driver.Valuer interface,
+// and turns the IntBool into a bitfield (BIT(1)) for MySQL storage.
+func (b IntBool) Value() (driver.Value, error) {
+	if b {
+		return 1, nil
+	} else {
+		return 0, nil
+	}
+}
+
+// Scan implements the sql.Scanner interface,
+// and turns the bitfield incoming from MySQL into a IntBool
+func (b *IntBool) Scan(src interface{}) error {
+	v, ok := src.(int)
+	if !ok {
+		return errors.New("bad []byte type assertion")
+	}
+	*b = v == 1
+	return nil
+}
+
+
+
 type Roles []Role
 
 //
