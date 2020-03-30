@@ -21,6 +21,9 @@ type Livegame struct {
 	HomeShotsOnGoal Sog `gorm:"foreignkey:IdLiveGame,IdTeamHome;association_foreignkey:IdLiveGame,IdTeam"`
 	AwayShotsOnGoal Sog `gorm:"foreignkey:IdLiveGame,IdTeamAway;association_foreignkey:IdLiveGame,IdTeam"`
 
+	HomeScoring Scoring `gorm:"foreignkey:IdLiveGame,IdTeamHome;association_foreignkey:IdLiveGame,IdTeam"`
+	AwayScoring Scoring `gorm:"foreignkey:IdLiveGame,IdTeamAway;association_foreignkey:IdLiveGame,IdTeam"`
+
 	Idschedule uint
 	Typetag    string
 	Statetag   string
