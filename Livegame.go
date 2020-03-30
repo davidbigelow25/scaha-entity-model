@@ -24,11 +24,12 @@ type Livegame struct {
 	HomePenalties   []*Penalty `gorm:"foreignkey:IdTeam;association_foreignkey:IdTeamHome"`
 	AwayPenalties   []*Penalty `gorm:"foreignkey:IdTeam;association_foreignkey:IdTeamAway"`
 
-	IdSchedule uint `gorm:"column:idschedule"`
+	IdSchedule uint     `gorm:"column:idschedule"`
 	Schedule   Schedule `gorm:"foreignkey:IdSchedule"`
 	Typetag    string
 	Statetag   string
-	Venuetag   string
+	VenueTag   string `gorm:"column:venuetag"`
+	Venue      Venue  `gorm:"foreignkey:Tag;association_foreignkey:VenueTag"`
 	Sheetname  string
 	Actdate    time.Time
 	Starttime  string
