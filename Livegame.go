@@ -12,20 +12,20 @@ import (
 // ToDo: Add all the teams Here
 
 type Livegame struct {
-
 	IdTeamHome uint  `gorm:"column:idteamhome"`
 	IdTeamAway uint  `gorm:"column:idteamaway"`
 	HomeTeam   Teams `gorm:"foreignkey:IdTeamHome"`
 	AwayTeam   Teams `gorm:"foreignkey:IdTeamAway"`
 
-	HomeShotsOnGoal []*Sog `gorm:"foreignkey:IdTeam;association_foreignkey:IdTeamHome"`
-	AwayShotsOnGoal []*Sog `gorm:"foreignkey:IdTeam;association_foreignkey:IdTeamAway"`
-	HomeScoring []*Scoring `gorm:"foreignkey:IdTeam;association_foreignkey:IdTeamHome"`
-	AwayScoring []*Scoring `gorm:"foreignkey:IdTeam;association_foreignkey:IdTeamAway"`
-	HomePenalties []*Penalty `gorm:"foreignkey:IdTeam;association_foreignkey:IdTeamHome"`
-	AwayPenalties []*Penalty `gorm:"foreignkey:IdTeam;association_foreignkey:IdTeamAway"`
+	HomeShotsOnGoal []*Sog     `gorm:"foreignkey:IdTeam;association_foreignkey:IdTeamHome"`
+	AwayShotsOnGoal []*Sog     `gorm:"foreignkey:IdTeam;association_foreignkey:IdTeamAway"`
+	HomeScoring     []*Scoring `gorm:"foreignkey:IdTeam;association_foreignkey:IdTeamHome"`
+	AwayScoring     []*Scoring `gorm:"foreignkey:IdTeam;association_foreignkey:IdTeamAway"`
+	HomePenalties   []*Penalty `gorm:"foreignkey:IdTeam;association_foreignkey:IdTeamHome"`
+	AwayPenalties   []*Penalty `gorm:"foreignkey:IdTeam;association_foreignkey:IdTeamAway"`
 
 	Idschedule uint
+	Schedule   Schedule `gorm:"foreignkey:IdSchedule"`
 	Typetag    string
 	Statetag   string
 	Venuetag   string
