@@ -21,12 +21,12 @@ type Roster struct {
 
 	IsPlayerUp BitBool  `gorm:"column:isplayerup"`
 	IsVoid BitBool  `gorm:"column:isvoid"`
-	IsGoalie IntBool  `gorm:"column:isgoalie"`
+	IsGoalie uint  `gorm:"column:isgoalie"`
 	IsConfirmed BitBool `gorm:"column:isconfirmed"`
 	IsSupsended BitBool `gorm:"column:issuspended"`
 
 	Person Person `gorm:"foreignkey:IdPerson"`
-	Player Player `gorm:"association_foreignkey:IdPerson"`
+	Player Player `gorm:"foreignkey:IdPerson"`
 
 	// Controll information
 	ID uint `gorm:"column:idroster;primary_key"`
