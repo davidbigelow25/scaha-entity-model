@@ -25,7 +25,7 @@ type Roster struct {
 	IsConfirmed BitBool `gorm:"column:isconfirmed"`
 	IsSupsended BitBool `gorm:"column:issuspended"`
 
-	Person Person `gorm:"foreignkey:idperson"`
+	Person Person `gorm:"foreignkey:IdPerson"`
 	// Controll information
 	ID uint `gorm:"column:idroster;primary_key"`
 	IsActive bool    `gorm:"column:isactive"`
