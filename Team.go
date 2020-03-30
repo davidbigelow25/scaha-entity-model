@@ -18,6 +18,9 @@ type Teams struct {
 	Grouptag string
 	PlayerCountCalc uint `gorm:"column:playercountcalc"`
 
+	//  Roster
+	RosterSpots  []*Roster  `gorm:"foreignkey:IdTeam"`
+
 	// Controll information
 	ID uint `gorm:"column:idteams;primary_key"`
 	IsActive bool    `gorm:"column:isactive"`
