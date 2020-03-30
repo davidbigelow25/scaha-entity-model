@@ -11,7 +11,7 @@ type Roster struct {
 	Year 	  uint
 	SeasonTag string   `gorm:"column:seasontag"`
 	Notes  string
-
+	RosterType string   `gorm:"column:rostertype"`
 	//
 	// Some key Dates here
 	Added  time.Time
@@ -21,7 +21,7 @@ type Roster struct {
 
 	IsPlayerUp BitBool  `gorm:"column:isplayerup"`
 	IsVoid BitBool  `gorm:"column:isvoid"`
-	IsGoalie BitBool  `gorm:"column:isgoalie"`
+	IsGoalie uint  `gorm:"column:isgoalie"`
 	IsConfirmed BitBool `gorm:"column:isconfirmed"`
 	IsSupsended BitBool `gorm:"column:issuspended"`
 
