@@ -13,8 +13,8 @@ type Scoring struct {
 	IdRosterA1 uint `gorm:"column:idroster_a1"`
 	IdRosterA2 uint `gorm:"column:idroster_a2"`
 
-	GoalType string `gorm:"column:goaltype"`
 	Period   uint
+	GoalType string `gorm:"column:goaltype"`
 	TimeScored string `gorm:"column:timescored"`
 
 	// Controll information

@@ -18,11 +18,11 @@ type Livegame struct {
 	HomeTeam   Teams `gorm:"foreignkey:IdTeamHome"`
 	AwayTeam   Teams `gorm:"foreignkey:IdTeamAway"`
 
-	HomeShotsOnGoal Sog `gorm:"foreignkey:IdLiveGame,IdTeamHome;association_foreignkey:IdLiveGame,IdTeam"`
-	AwayShotsOnGoal Sog `gorm:"foreignkey:IdLiveGame,IdTeamAway;association_foreignkey:IdLiveGame,IdTeam"`
+	HomeShotsOnGoal Sog `gorm:"foreignkey:IdTeamHome,IdLiveGame;association_foreignkey:IdTeam,IdLiveGame"`
+	AwayShotsOnGoal Sog `gorm:"foreignkey:IdTeamAway,IdLiveGame,;association_foreignkey:IdTeam,IdLiveGame"`
 
-	HomeScoring []*Scoring `gorm:"foreignkey:IdLiveGame,IdTeamHome;association_foreignkey:IdLiveGame,IdTeam"`
-	AwayScoring []*Scoring `gorm:"foreignkey:IdLiveGame,IdTeamAway;association_foreignkey:IdLiveGame,IdTeam"`
+//	HomeScoring []*Scoring `gorm:"foreignkey:IdLiveGame,IdTeamHome;association_foreignkey:IdLiveGame,IdTeam"`
+//	AwayScoring []*Scoring `gorm:"foreignkey:IdLiveGame,IdTeamAway;association_foreignkey:IdLiveGame,IdTeam"`
 
 	Idschedule uint
 	Typetag    string
