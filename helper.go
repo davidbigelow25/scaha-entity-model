@@ -49,9 +49,9 @@ func (b IntBool) Value() (driver.Value, error) {
 // Scan implements the sql.Scanner interface,
 // and turns the bitfield incoming from MySQL into a IntBool
 func (b *IntBool) Scan(src interface{}) error {
-	v, ok := src.(int)
+	v, ok := src.(uint)
 	if !ok {
-		return errors.New("bad []byte type assertion")
+		return errors.New("bad Value Type")
 	}
 	*b = v == 1
 	return nil
