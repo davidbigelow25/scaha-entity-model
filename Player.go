@@ -4,7 +4,7 @@ import "time"
 
 type Player struct {
 
-	IdPerson uint `gorm:"column:idperson"`
+	IdPerson uint `gorm:"column:idperson",sql:"index"`
 	IsGoalie IntBool  `gorm:"column:isgoalie"`
 	IsBcVerified IntBool `gorm:"column:bcverified"`
 
