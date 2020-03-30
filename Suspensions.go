@@ -3,27 +3,25 @@ package entity
 import "time"
 
 type Suspensions struct {
-
 	IdPerson uint `gorm:"column:idperson"`
-	IdClub uint `gorm:"column:idclub"`
-	IdTeam uint `gorm:"column:idteam"`
+	IdClub   uint `gorm:"column:idclub"`
+	IdTeam   uint `gorm:"column:idteam"`
 
-	SuspensionDate time.Time  `gorm:"column:suspensiondate"`
+	SuspensionDate time.Time `gorm:"column:suspensiondate"`
 
-	Infraction string
-	NumberOfGames uint `gorm:"column:numberofGames"`
-	IsMatch BitBool  `gorm:"column:ismatch"`
+	Infraction    string
+	NumberOfGames uint    `gorm:"column:numberofgames"`
+	IsMatch       BitBool `gorm:"column:ismatch"`
 
 	Eligibility string
-	ReviewFile string
+	ReviewFile  string
 
 	IsServed BitBool `gorm:"column:isserved"`
 
 	// Controll information
-	ID uint `gorm:"column:idsuspensions;primary_key"`
-	IsActive bool    `gorm:"column:isactive"`
-	UpdatedAt  time.Time `gorm:"column:updated"`
+	ID        uint      `gorm:"column:idsuspensions;primary_key"`
+	IsActive  bool      `gorm:"column:isactive"`
+	UpdatedAt time.Time `gorm:"column:updated"`
 	//	DeletedAt  *time.Time `sql:"index"`
-	CreatedAt  time.Time
-
+	CreatedAt time.Time
 }
