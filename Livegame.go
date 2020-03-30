@@ -20,6 +20,7 @@ type Livegame struct {
 
 	ShotsOnGoal []*Sog `gorm:"foreignkey:IdLiveGame"`
 	Scoring []*Scoring `gorm:"foreignkey:IdLiveGame"`
+	Penalties []*Penalty `gorm:"foreignkey:IdLiveGame"`
 
 	Idschedule uint
 	Typetag    string
