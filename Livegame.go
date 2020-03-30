@@ -15,8 +15,8 @@ type Livegame struct {
 
 	IdTeamHome uint  `gorm:"column:idteamhome"`
 	IdTeamAway uint  `gorm:"column:idteamaway"`
-	HomeTeam   Teams `gorm:"foreignkey:idteamhome"`
-	AwayTeam   Teams `gorm:"foreignkey:idteamaway"`
+	HomeTeam   Teams `gorm:"foreignkey:IdTeamHome"`
+	AwayTeam   Teams `gorm:"foreignkey:IdTeamAway"`
 
 	Idschedule uint
 	Typetag    string
