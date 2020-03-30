@@ -4,9 +4,9 @@ import "time"
 
 type Sog struct {
 
-	IdLiveGame uint `gorm:"column:idlivegame;primary_key"`
-	IdTeam uint `gorm:"column:idteam:primary_key"`
-	IdRoster uint `gorm:"column:idroster:primary_key"`
+	IdLiveGame uint `gorm:"column:idlivegame;primary_key;AUTO_INCREMENT:false"`
+	IdTeam uint `gorm:"column:idteam;primary_key;AUTO_INCREMENT:false"`
+	IdRoster uint `gorm:"column:idroster;primary_key;AUTO_INCREMENT:false"`
 
 	// What is the playtime in minutes and seconds
 	PlayTime string `gorm:"column:playtime"`
