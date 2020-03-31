@@ -4,30 +4,29 @@ import "time"
 
 type Teams struct {
 
-	Idclub  uint
-	Sname string
-	Teamname string
-	Teamgender string
-	Idskilllevel uint
-	Iddivisions uint
-	Divisiontag string
-	Isexhibition bool
-	Year 	  uint
-	Seasontag string
-	Scheduletags  string
-	Grouptag string
-	PlayerCountCalc uint `gorm:"column:playercountcalc"`
+	IdClub        uint    `gorm:"column:idclub"`
 
-	//  Roster
-	RosterSpots  []*Roster  `gorm:"foreignkey:IdTeam"`
+	Name          string  `gorm:"column:sname"`
+	TeamName      string  `gorm:"column:teamname"`
+	TeamGender    string  `gorm:"column:teamgender"`
+	IdSkillLevel  uint    `gorm:"column:IdSkillLevel"`
+	IdDivisions   uint    `gorm:"column:iddivisions"`
+	DivisionTag   string  `gorm:"column:divisiontag"`
+	SkillLevelTag string  `gorm:"column:skillleveltag"`
+	IsExhibition  BitBool `gorm:"column:isexhibition"`
+	Year          uint
+	Seasontag     string `gorm:"column:SeasonTag"`
+	ScheduleTags  string `gorm:"column:ScheduleTags"`
+	GroupTag      string `gorm:"column:grouptag"`
 
-	// Suspensions from a Team Perspective
+	//  Rosters and List of Suspensions
+	RosterSpots []*Roster `gorm:"foreignkey:IdTeam"`
 	Suspensions []*Suspensions `gorm:"foreignkey:IdTeam"`
 
 	// Controll information
-	ID uint `gorm:"column:idteams;primary_key"`
-	IsActive bool    `gorm:"column:isactive"`
-	UpdatedAt  time.Time `gorm:"column:updated"`
-//	DeletedAt  *time.Time `sql:"index"`
-	CreatedAt  time.Time
+	ID        uint      `gorm:"column:idteams;primary_key"`
+	IsActive  bool      `gorm:"column:isactive"`
+	UpdatedAt time.Time `gorm:"column:updated"`
+	//	DeletedAt  *time.Time `sql:"index"`
+	CreatedAt time.Time
 }
