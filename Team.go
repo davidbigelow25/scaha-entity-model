@@ -15,8 +15,8 @@ type Teams struct {
 	SkillLevelTag string  `gorm:"column:skillleveltag"`
 	IsExhibition  BitBool `gorm:"column:isexhibition"`
 	Year          uint
-	Seasontag     string `gorm:"column:SeasonTag"`
-	ScheduleTags  string `gorm:"column:ScheduleTags"`
+	SeasonTag     string `gorm:"column:seasontag"`
+	ScheduleTags  string `gorm:"column:scheduletags"`
 	GroupTag      string `gorm:"column:grouptag"`
 
 	//  Rosters and List of Suspensions
