@@ -5,6 +5,7 @@ import "time"
 type Venue struct {
 	ShortName   string `gorm:"column:shortname"`
 	Description string `gorm:"column:description"`
+	GmapParms   string  `gorm:"column:gmapparms"`
 
 	// Control information
 	ID        uint `gorm:"column:idvenue;primary_key"`
