@@ -26,17 +26,17 @@ type Livegame struct {
 
 	IdSchedule uint     `gorm:"column:idschedule"`
 	Schedule   Schedule `gorm:"foreignkey:IdSchedule"`
-	Typetag    string
-	Statetag   string
+	TypeTag    string `gorm:"column:typetag"`
+	StateTag   string `gorm:"column:statetag"`
 	VenueTag   string `gorm:"column:venuetag"`
 	Venue      Venue  `gorm:"foreignkey:Tag;association_foreignkey:VenueTag"`
-	Sheetname  string
-	Actdate    time.Time
-	Starttime  string
-	Gametag    string
-	Scorehome  uint
-	Scoreaway  uint
-	Gamenotes  string
+	SheetName  string `gorm:"column:sheetname"`
+	ActDate    time.Time `gorm:"column:actdate"`
+	StartTime  string  `gorm:"column:starttime"`
+	GameTag    string  `gorm:"column:gametag"`
+	ScoreHome  uint `gorm:"column:scorehome"`
+	ScoreAway  uint `gorm:"column:scoreaway"`
+	GameNotes  string   `gorm:"column:gamenotes"`
 
 	ID        uint      `gorm:"column:idlivegame;primary_key"`
 	UpdatedAt time.Time `gorm:"column:updated"`
