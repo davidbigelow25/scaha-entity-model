@@ -23,20 +23,21 @@ type Livegame struct {
 	AwayScoring     []*Scoring `gorm:"foreignkey:IdTeam;association_foreignkey:IdTeamAway"`
 	HomePenalties   []*Penalty `gorm:"foreignkey:IdTeam;association_foreignkey:IdTeamHome"`
 	AwayPenalties   []*Penalty `gorm:"foreignkey:IdTeam;association_foreignkey:IdTeamAway"`
+	Mia             []*Mia     `gorm:"foreignkey:IdLiveGame"`
 
-	IdSchedule uint     `gorm:"column:idschedule"`
-	Schedule   Schedule `gorm:"foreignkey:IdSchedule"`
-	TypeTag    string `gorm:"column:typetag"`
-	StateTag   string `gorm:"column:statetag"`
-	VenueTag   string `gorm:"column:venuetag"`
-	Venue      Venue  `gorm:"foreignkey:Tag;association_foreignkey:VenueTag"`
-	SheetName  string `gorm:"column:sheetname"`
+	IdSchedule uint      `gorm:"column:idschedule"`
+	Schedule   Schedule  `gorm:"foreignkey:IdSchedule"`
+	TypeTag    string    `gorm:"column:typetag"`
+	StateTag   string    `gorm:"column:statetag"`
+	VenueTag   string    `gorm:"column:venuetag"`
+	Venue      Venue     `gorm:"foreignkey:Tag;association_foreignkey:VenueTag"`
+	SheetName  string    `gorm:"column:sheetname"`
 	ActDate    time.Time `gorm:"column:actdate"`
-	StartTime  string  `gorm:"column:starttime"`
-	GameTag    string  `gorm:"column:gametag"`
-	ScoreHome  uint `gorm:"column:scorehome"`
-	ScoreAway  uint `gorm:"column:scoreaway"`
-	GameNotes  string   `gorm:"column:gamenotes"`
+	StartTime  string    `gorm:"column:starttime"`
+	GameTag    string    `gorm:"column:gametag"`
+	ScoreHome  uint      `gorm:"column:scorehome"`
+	ScoreAway  uint      `gorm:"column:scoreaway"`
+	GameNotes  string    `gorm:"column:gamenotes"`
 
 	ID        uint      `gorm:"column:idlivegame;primary_key"`
 	UpdatedAt time.Time `gorm:"column:updated"`
