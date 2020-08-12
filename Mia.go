@@ -2,12 +2,13 @@ package entity
 
 import "time"
 
+// Lets make the Roster and LiveGame the primary key here
 type Mia struct {
-	IdRoster   uint `gorm:"column:idroster"`
-	IdLiveGame uint `gorm:"column:idlivegame"`
+	IdRoster   uint `gorm:"column:idroster;primary_key"`
+	IdLiveGame uint `gorm:"column:idlivegame;primary_key"`
 
-	// Controll information
-	ID        uint      `gorm:"column:idmia;primary_key"`
+	// Control information
+	ID        uint      `gorm:"column:idmia"`
 	IsActive  bool      `gorm:"column:isactive"`
 	UpdatedAt time.Time `gorm:"column:updated"`
 	//	DeletedAt  *time.Time `sql:"index"`
