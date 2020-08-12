@@ -9,8 +9,8 @@ type Mia struct {
 
 	// Control information
 	ID        uint      `gorm:"column:idmia;AUTO_INCREMENT"`
-	IsActive  bool      `gorm:"column:isactive"`
+	IsActive  uint      `gorm:"column:isactive"`
 	UpdatedAt time.Time `gorm:"column:updated"`
-	//	DeletedAt  *time.Time `sql:"index"`
+	//	DeletedAt  *time.Time `sql:"indexs"`
 	CreatedAt time.Time `gorm:"-"`
 }
