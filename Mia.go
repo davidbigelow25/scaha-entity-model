@@ -8,7 +8,7 @@ type Mia struct {
 	IdLiveGame uint `gorm:"column:idlivegame;primary_key"`
 
 	// Control information
-	ID        uint      `gorm:"column:idmia"`
+	ID        uint      `gorm:"column:idmia;AUTO_INCREMENT"`
 	IsActive  bool      `gorm:"column:isactive"`
 	UpdatedAt time.Time `gorm:"column:updated"`
 	//	DeletedAt  *time.Time `sql:"index"`
