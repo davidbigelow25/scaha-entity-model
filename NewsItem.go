@@ -10,5 +10,5 @@ type NewsItem struct {
 	Intro    string
 	Body     string
 	State    string
-	IsActive bool
+	IsActive *bool
 }

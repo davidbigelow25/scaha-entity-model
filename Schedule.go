@@ -19,7 +19,7 @@ type Schedule struct {
 	// Controll information
 	ID        uint      `gorm:"column:idschedule;primary_key"`
 	Tag       string
-	IsActive  bool      `gorm:"column:isactive"`
+	IsActive  *bool      `gorm:"column:isactive"`
 	UpdatedAt time.Time `gorm:"column:updated"`
 	//	DeletedAt  *time.Time `sql:"index"`
 	CreatedAt time.Time

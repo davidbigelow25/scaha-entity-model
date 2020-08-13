@@ -39,8 +39,11 @@ type Livegame struct {
 	ScoreAway  uint      `gorm:"column:scoreaway"`
 	GameNotes  string    `gorm:"column:gamenotes"`
 	GameClock  string    `gorm:"column:gameclock"`
+	StartOfGame time.Time`gorm:"column:startofgame"`
+	EndOfGame time.Time  `gorm:"column:endofgame"`
 	Period 	   uint      `gorm:"column:period"`
 	ID        uint       `gorm:"column:idlivegame;primary_key"`
+	IsActive  *bool      `gorm:"column:isactive"`
 	UpdatedAt time.Time  `gorm:"column:updated"`
 	//	DeletedAt     *time.Time `sql:"index"`
 	CreatedAt time.Time
