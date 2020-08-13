@@ -19,7 +19,7 @@ type Suspensions struct {
 	IsServed BitBool `gorm:"column:isserved"`
 
 	// Controll information
-	ID        uint      `gorm:"column:idsuspensions;primary_key"`
+	ID        uint      `gorm:"column:idsuspensions;primary_key;AUTO_INCREMENT"`
 	IsActive  *bool      `gorm:"column:isactive"`
 	UpdatedAt time.Time `gorm:"column:updated"`
 	//	DeletedAt  *time.Time `sql:"index"`

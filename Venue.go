@@ -8,7 +8,7 @@ type Venue struct {
 	GmapParms   string  `gorm:"column:gmapparms"`
 
 	// Control information
-	ID        uint `gorm:"column:idvenue;primary_key"`
+	ID        uint `gorm:"column:idvenue;primary_key;AUTO_INCREMENT"`
 	Tag       string
 	IsActive  *bool      `gorm:"column:isactive"`
 	UpdatedAt time.Time `gorm:"column:updated"`

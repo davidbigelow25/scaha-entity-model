@@ -23,7 +23,7 @@ type Teams struct {
 	Suspensions []*Suspensions `gorm:"foreignkey:IdTeam"`
 
 	// Controll information
-	ID        uint      `gorm:"column:idteams;primary_key"`
+	ID        uint      `gorm:"column:idteams;primary_key;AUTO_INCREMENT"`
 	IsActive  *bool      `gorm:"column:isactive"`
 	UpdatedAt time.Time `gorm:"column:updated"`
 	//	DeletedAt  *time.Time `sql:"index"`

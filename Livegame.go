@@ -42,7 +42,7 @@ type Livegame struct {
 	StartOfGame time.Time`gorm:"column:startofgame"`
 	EndOfGame time.Time  `gorm:"column:endofgame"`
 	Period 	   uint      `gorm:"column:period"`
-	ID        uint       `gorm:"column:idlivegame;primary_key"`
+	ID        uint       `gorm:"column:idlivegame;primary_key;AUTO_INCREMENT"`
 	IsActive  *bool      `gorm:"column:isactive"`
 	UpdatedAt time.Time  `gorm:"column:updated"`
 	//	DeletedAt     *time.Time `sql:"index"`

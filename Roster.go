@@ -3,8 +3,8 @@ package entity
 import "time"
 
 type Roster struct {
-	IdPerson uint `gorm:"column:idperson"`
-	IdTeam   uint `gorm:"column:idteam"`
+	IdPerson uint `gorm:"column:idperson;primary_key"`
+	IdTeam   uint `gorm:"column:idteam;primary_key"`
 
 	JerseyNumber string `gorm:"column:jerseynumber"`
 	Year         uint
@@ -28,7 +28,7 @@ type Roster struct {
 	Player Player `gorm:"foreignkey:IdPerson;association_foreignkey:IdPerson"`
 
 	// Controll information
-	ID        uint      `gorm:"column:idroster;primary_key"`
+	ID        uint      `gorm:"column:idroster;primary_key;AUTO_INCREMENT"`
 	IsActive  *bool     `gorm:"column:isactive"`
 	UpdatedAt time.Time `gorm:"column:updated"`
 	//	DeletedAt  *time.Time `sql:"index"`

@@ -23,7 +23,7 @@ type Sog struct {
 	Shots9  uint
 
 	// Controll information
-	ID uint `gorm:"column:idsog;primary_key"`
+	ID uint `gorm:"column:idsog;primary_key;AUTO_INCREMENT"`
 	IsActive *bool    `gorm:"column:isactive"`
 	UpdatedAt  time.Time `gorm:"column:updated"`
 	//	DeletedAt  *time.Time `sql:"index"`

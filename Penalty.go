@@ -13,7 +13,7 @@ type Penalty struct {
 	TimeOfPenalty string `gorm:"column:timeofpenalty"`
 
 	// Controll information
-	ID        uint      `gorm:"column:idpenalty;primary_key"`
+	ID        uint      `gorm:"column:idpenalty;primary_key;AUTO_INCREMENT"`
 	IsActive  *bool     `gorm:"column:isactive"`
 	UpdatedAt time.Time `gorm:"column:updated"`
 	//	DeletedAt  *time.Time `sql:"index"`

@@ -17,7 +17,7 @@ type Schedule struct {
 	// We can add all the extra needed columns later
 
 	// Controll information
-	ID        uint      `gorm:"column:idschedule;primary_key"`
+	ID        uint      `gorm:"column:idschedule;primary_key;AUTO_INCREMENT"`
 	Tag       string
 	IsActive  *bool      `gorm:"column:isactive"`
 	UpdatedAt time.Time `gorm:"column:updated"`
