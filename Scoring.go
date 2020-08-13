@@ -8,7 +8,6 @@ type Scoring struct {
 
 	IdLiveGame uint `gorm:"column:idlivegame"`
 	IdTeam uint `gorm:"column:idteam"`
-
 	IdRosterGoal uint `gorm:"column:idroster_goal"`
 	IdRosterA1 uint `gorm:"column:idroster_a1"`
 	IdRosterA2 uint `gorm:"column:idroster_a2"`
@@ -22,6 +21,6 @@ type Scoring struct {
 	IsActive *bool    `gorm:"column:isactive"`
 	UpdatedAt  time.Time `gorm:"column:updated"`
 	//	DeletedAt  *time.Time `sql:"index"`
-	CreatedAt  time.Time
+	CreatedAt  time.Time `gorm:"-"`
 
 }
